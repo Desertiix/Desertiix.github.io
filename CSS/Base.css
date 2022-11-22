@@ -1,0 +1,68 @@
+/* 把所有的内外边距清零 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* em和i的斜体的文字不倾斜 */
+em,
+i {
+  font-style: normal;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  /* border 0 照顾低版本的浏览器 如果图片外面包含了链接会有边框问题 */
+  border: 0;
+  /* 取消图片底侧有空白缝隙的问题 */
+  vertical-align: middle;
+}
+
+button {
+  /* 将我们鼠标经过我们的button按钮的时候，鼠标变成小手 */
+  cursor: pointer;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #c81623;
+}
+
+button,
+input {
+  /* \5B8B\4F53：宋体，使得浏览器的兼容性好 */
+  font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+}
+
+body {
+  /* 文字放大的时候抗锯齿，使得文字显示更加清晰 */
+  -webkit-font-smoothing: antialiased;
+  background-color: #fff;
+  font: 16px Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+}
+
+.hide,
+.none {
+  display: none;
+}
+
+/* 清除浮动 */
+.clearfix:after {
+  visibility: hidden;
+  clear: both;
+  display: block;
+  content: ".";
+  height: 0;
+}
+
+.clearfix {
+  *zoom: 1;
+}
